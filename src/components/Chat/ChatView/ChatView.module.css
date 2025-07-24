@@ -1,0 +1,25 @@
+.container {
+	width: 100%;
+	max-width: 800px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: calc(100vh - 40px); /* Учитываем padding от root */
+}
+
+.typingDot {
+	animation: typingAnimation 1.4s infinite;
+}
+
+@keyframes typingAnimation {
+	0%,
+	60%,
+	100% {
+		transform: translateY(0);
+		opacity: 0.4;
+	}
+	30% {
+		transform: translateY(-10px);
+		opacity: 1;
+	}
+}
