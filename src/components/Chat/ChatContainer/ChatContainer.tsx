@@ -23,7 +23,7 @@ export const ChatContainer: React.FC = () => {
 		await processReply(message);
 	};
 
-	async function processReply(userMessage: string): Promise<void> {
+	const processReply = (userMessage: string) => {
 		setTimeout(() => {
 			const responseMessage: IMessage = {
 				message: userMessage,
@@ -36,7 +36,7 @@ export const ChatContainer: React.FC = () => {
 			]);
 			setTyping(false);
 		}, BOT_ANSWER_DELAY);
-	}
+	};
 
 	const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>): void => {
 		if (e.key === 'Enter' && !e.shiftKey) {
